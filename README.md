@@ -2,12 +2,23 @@
 
 Code and derived data for:
 
-**Park J, Fowler SJ.** Genome-resolved comparison shows that apparent selection in
-near-surface bioaerosols reflects lineage, not survival traits. *(manuscript in preparation)*
+**Park J, Fowler SJ.** Genome-resolved comparison with paired source environments
+shows that lineage, not survival traits, distinguishes airborne bacteria.
+*(manuscript in preparation)*
 
 This repository reproduces every figure, table and statistic in the paper from the
 derived tables in `data/`. Raw sequencing reads are deposited separately in the
 European Nucleotide Archive under project accession **PRJEB109287**.
+
+## Companion repository
+
+This is the genome-resolved half of a two-paper study. The read-based community
+and gene-centric analyses of the same aerosol and paired source metagenomes are in
+[aeromicrobiome-readbased](https://github.com/jungsoo3436-jpg/aeromicrobiome-readbased),
+which covers Kraken2/Bracken taxonomic profiling, diversity and ordination,
+site-blocked DESeq2 differential abundance, and curated marker gene profiling
+against a non-redundant gene catalog. Both repositories draw on the same
+sequencing deposit, ENA PRJEB109287.
 
 ## What the study did
 
