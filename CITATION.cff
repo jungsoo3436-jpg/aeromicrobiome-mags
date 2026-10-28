@@ -11,7 +11,7 @@ authors:
     affiliation: "Department of Biological Sciences, Simon Fraser University"
     email: "sjfowler@sfu.ca"
 license: MIT
-repository-code: "https://github.com/REPLACE_WITH_YOUR_USERNAME/aeromicrobiome-mags"
+repository-code: "https://github.com/jungsoo3436-jpg/aeromicrobiome-mags"
 preferred-citation:
   type: article
   title: "Genome-resolved comparison shows that apparent selection in near-surface bioaerosols reflects lineage, not survival traits"
