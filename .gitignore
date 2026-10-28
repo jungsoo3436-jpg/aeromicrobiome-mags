@@ -1,0 +1,13 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# analysis outputs (regenerate by running the script)
+mag_based/corrected_analysis/
+corrected_analysis/
+
+# OS
+.DS_Store
+Thumbs.db

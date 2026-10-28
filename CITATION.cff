@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the associated paper."
+title: "aeromicrobiome-mags: code and derived data for a genome-resolved comparison of near-surface bioaerosols with paired source environments"
+authors:
+  - family-names: "Park"
+    given-names: "Jungsoo"
+    affiliation: "Department of Biological Sciences, Simon Fraser University"
+    email: "jungsoop@sfu.ca"
+  - family-names: "Fowler"
+    given-names: "S. Jane"
+    affiliation: "Department of Biological Sciences, Simon Fraser University"
+    email: "sjfowler@sfu.ca"
+license: MIT
+repository-code: "https://github.com/REPLACE_WITH_YOUR_USERNAME/aeromicrobiome-mags"
+preferred-citation:
+  type: article
+  title: "Genome-resolved comparison shows that apparent selection in near-surface bioaerosols reflects lineage, not survival traits"
+  authors:
+    - family-names: "Park"
+      given-names: "Jungsoo"
+    - family-names: "Fowler"
+      given-names: "S. Jane"
+  year: 2026
