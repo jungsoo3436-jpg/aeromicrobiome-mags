@@ -2,8 +2,8 @@
 
 Code and derived data for:
 
-**Park J, Fowler SJ.** Genome-resolved comparison with paired source environments
-shows that lineage, not survival traits, distinguishes airborne bacteria.
+**Park J, Fowler SJ.** Genome-resolved comparison shows that apparent selection in
+near-surface bioaerosols reflects lineage, not survival traits.
 *(manuscript in preparation)*
 
 This repository reproduces every figure, table and statistic in the paper from the
