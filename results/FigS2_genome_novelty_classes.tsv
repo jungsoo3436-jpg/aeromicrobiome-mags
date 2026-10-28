@@ -1,0 +1,13 @@
+air_group	cls	n	N	pct	xlab
+Air-enriched	No reported ANI	7	40	17.5	"Air-enriched
+(n = 40)"
+Air-enriched	Related species (ANI < 95%)	5	40	12.5	"Air-enriched
+(n = 40)"
+Air-enriched	Same species (ANI of 95% or more)	28	40	70	"Air-enriched
+(n = 40)"
+Air-depleted	No reported ANI	181	284	63.7323943661972	"Air-depleted
+(n = 284)"
+Air-depleted	Related species (ANI < 95%)	52	284	18.3098591549296	"Air-depleted
+(n = 284)"
+Air-depleted	Same species (ANI of 95% or more)	51	284	17.9577464788732	"Air-depleted
+(n = 284)"

@@ -74,7 +74,13 @@ Outputs are written to `results/`: the eight figure PDFs, a `.tsv` for every
 statistic reported in the paper, and `sessionInfo.txt`. Runtime is a few minutes
 on a laptop; the phylogenetic and population genomics sections are the slowest
 steps. The script runs end to end and exits cleanly; the committed `results/`
-is what it produced.
+is what it produced, on macOS 27.0.1 under R 4.5.3 (see
+`results/sessionInfo.txt` for every package version).
+
+The same run on Linux x86_64 under R 4.3.3 reproduced every statistic to the
+precision reported in the paper, with the bootstrap tables byte-identical.
+Residual differences are confined to the tenth significant digit and beyond,
+and come from the iterative mixed-model optimiser and platform BLAS.
 
 ## Software used
 

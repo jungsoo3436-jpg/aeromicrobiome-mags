@@ -1,0 +1,31 @@
+genome	sample	mapped_reads	rpkm	share_pct	site	domain	gtdb_classification
+DF.bin.10	AC_DF2	3627	0.161737327037189	3.38254357577849	DF	Bacteria	d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Enterococcaceae;g__Enterococcus_F;s__Enterococcus_F saccharolyticus
+DF.bin.620	AC_DF2	2918	0.104175390498017	2.72132951588686	DF	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Actinomycetales;f__Micrococcaceae;g__Glutamicibacter;s__Glutamicibacter arilaitensis
+DF.bin.33	AC_DF2	2761	0.209327077739338	2.57491116976135	DF	Archaea	d__Archaea;p__Methanobacteriota;c__Methanobacteria;o__Methanobacteriales;f__Methanobacteriaceae;g__Methanobrevibacter;s__Methanobrevibacter sp900314635
+DF.bin.73	AC_DF2	2442	0.209647158234186	2.27741147285665	DF	Bacteria	d__Bacteria;p__Bacillota;c__Bacilli;o__Erysipelotrichales;f__Erysipelotrichaceae;g__Erysipelothrix;s__Erysipelothrix sp012520695
+RM.bin.44	AC_DF2	1855	0.0325293309708049	1.72997472651478	RM	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Rhizobiales;f__Xanthobacteraceae;g__Bradyrhizobium;s__
+DF.bin.552	AC_DF2	1704	0.0686813679183794	1.58915198597368	DF	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Propionibacteriales;f__Propionibacteriaceae;g__Arachnia;s__Arachnia sp012837465
+VL.bin.964	AC_DF2	1683	0.127664766666821	1.56956736642823	VL	Bacteria	d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Aerococcaceae;g__Aerococcus;s__Aerococcus urinaeequi
+DF.bin.793	AC_DF2	1564	0.0825905873333208	1.45858785567068	DF	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Pseudomonadales;f__DSM-6294;g__Venatoribacter;s__
+DF.bin.160	AC_DF2	1468	0.0862651720878191	1.36905816632005	DF	Bacteria	d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Aerococcaceae;g__Fundicoccus;s__
+DF.bin.295	AC_DF2	1448	0.0905210195133906	1.35040614770534	DF	Bacteria	d__Bacteria;p__Bacillota;c__Clostridia;o__Oscillospirales;f__Acutalibacteraceae;g__Ruminococcoides;s__Ruminococcoides sp900317315
+DF.bin.326	AC_DF2	1360	0.0863375596452749	1.26833726580059	DF	Bacteria	d__Bacteria;p__Bacillota;c__Bacilli;o__Lactobacillales;f__Aerococcaceae;g__Jeotgalibaca;s__Jeotgalibaca porci
+DF.bin.164	AC_DF2	1281	0.0571573009491785	1.19466179227247	DF	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Actinomycetales;f__Dermatophilaceae;g__Ornithinimicrobium;s__
+DF.bin.431	AC_DF2	1281	0.0858692174521937	1.19466179227247	DF	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Actinomycetales;f__Bifidobacteriaceae;g__Bifidobacterium;s__Bifidobacterium globosum
+VL.bin.874	AC_DF2	1245	0.0418561739426477	1.16108815876598	VL	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Actinomycetales;f__Dermatophilaceae;g__Ornithinimicrobium;s__
+DF.bin.318	AC_DF2	1194	0.0534827499960669	1.11352551129846	DF	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Xanthomonadales;f__Xanthomonadaceae;g__Pseudoxanthomonas;s__
+DF.bin.33	AC_RM2	1840	0.206215213674991	8.18396121514033	DF	Archaea	d__Archaea;p__Methanobacteriota;c__Methanobacteria;o__Methanobacteriales;f__Methanobacteriaceae;g__Methanobrevibacter;s__Methanobrevibacter sp900314635
+RM.bin.44	AC_RM2	974	0.0252484109167315	4.3321620780145	RM	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Rhizobiales;f__Xanthobacteraceae;g__Bradyrhizobium;s__
+VL.bin.758	AC_RM2	712	0.0161321380550829	3.16683716585865	VL	Bacteria	d__Bacteria;p__Myxococcota;c__Polyangia;o__Polyangiales;f__Polyangiaceae;g__FEN-1139;s__
+MK.bin.97	AC_RM2	553	0.0119295859746729	2.45963616955033	MK	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Acetobacterales;f__Acetobacteraceae;g__JAMXLO01;s__
+VL.bin.227	AC_RM2	527	0.014472797065736	2.34399323933639	VL	Bacteria	d__Bacteria;p__Myxococcota;c__Polyangia;o__Polyangiales;f__Polyangiaceae;g__CALKVW01;s__
+VL.bin.473	AC_RM2	447	0.0213257077137988	1.98816883867811	VL	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Rubrivivax;s__
+MK.bin.1	AC_RM2	398	0.013520835747994	1.77022639327492	MK	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Rhizobiales;f__Xanthobacteraceae;g__Bradyrhizobium;s__
+RM.bin.399	AC_RM2	397	0.014086044751666	1.76577858826669	RM	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__CAIKUF01;s__
+VL.bin.36	AC_RM2	375	0.0291788171313218	1.66792687808566	VL	Bacteria	d__Bacteria;p__Actinomycetota;c__Actinomycetes;o__Actinomycetales;f__Micrococcaceae;g__Micrococcus;s__Micrococcus endophyticus
+VL.bin.535	AC_RM2	372	0.00861286324711497	1.65458346306098	VL	Bacteria	d__Bacteria;p__Myxococcota;c__Polyangia;o__Polyangiales;f__Polyangiaceae;g__CALKVW01;s__
+VL.bin.319	AC_RM2	346	0.01510721529929	1.53894053284704	VL	Bacteria	d__Bacteria;p__Gemmatimonadota;c__Gemmatimonadetes;o__Gemmatimonadales;f__Gemmatimonadaceae;g__JAABRT01;s__
+RM.bin.90	AC_RM2	317	0.0118558252824995	1.40995418760842	RM	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Rubrivivax;s__
+BB.bin.205	AC_RM2	271	0.0146477855248224	1.20535515722991	BB	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Acetobacterales;f__Acetobacteraceae;g__Acidocella;s__
+VL.bin.913	AC_RM2	241	0.013001593953498	1.07192100698305	VL	Bacteria	d__Bacteria;p__Pseudomonadota;c__Gammaproteobacteria;o__Burkholderiales;f__Burkholderiaceae;g__Aquabacterium;s__Aquabacterium sp035438885
+MK.bin.273	AC_RM2	209	0.00724125530399322	0.929591246719744	MK	Bacteria	d__Bacteria;p__Pseudomonadota;c__Alphaproteobacteria;o__Rhizobiales;f__Xanthobacteraceae;g__JAVDCA01;s__
