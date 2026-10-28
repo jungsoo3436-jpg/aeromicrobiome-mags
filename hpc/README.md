@@ -35,7 +35,7 @@ nucleotide identity, with the default 75% completeness filter.
 
 Quality-filtered reads from all 17 metagenomes, including the two field controls,
 were mapped to the 532 dereplicated MAGs with minimap2 2.28 in short-read mode.
-Mean coverage per contig was calculated with CoverM using default settings and
+Mean coverage per contig was calculated with CoverM (Aroney et al. 2025) using default settings and
 averaged per MAG, weighting contigs by length.
 
 ## 5b. Read composition

@@ -93,7 +93,7 @@ and come from the iterative mixed-model optimiser and platform BLAS.
 | Genome quality | CheckM | 1.1.3 |
 | Dereplication | dRep | 3.6.1 |
 | Coverage mapping | minimap2 | 2.28 |
-| Coverage calculation | CoverM | as cited |
+| Coverage calculation | CoverM (Aroney et al. 2025, doi:10.1093/bioinformatics/btaf147) | not recorded |
 | Taxonomy | GTDB-Tk (release 226) | 2.4.1 |
 | Gene prediction | Prodigal | 2.6.3 |
 | Annotation | eggNOG-mapper (eggNOG 5.0) | 2.1.12 |
