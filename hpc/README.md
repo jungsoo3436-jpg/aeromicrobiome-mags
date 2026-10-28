@@ -38,6 +38,15 @@ were mapped to the 532 dereplicated MAGs with minimap2 2.28 in short-read mode.
 Mean coverage per contig was calculated with CoverM using default settings and
 averaged per MAG, weighting contigs by length.
 
+## 5b. Read composition
+
+Quality-filtered reads from all 17 libraries were classified with Kraken2 to
+give the per-sample composition (unclassified, Bacteria, Archaea, Fungi,
+*Homo sapiens*, Viruses) that the read recruitment table and the field control
+comparison use. The reports are in `data/kraken_reports/`. This is the same
+classification step as in the companion read-based analysis, documented in
+[aeromicrobiome-readbased](https://github.com/jungsoo3436-jpg/aeromicrobiome-readbased).
+
 ## 6. Taxonomy and closest reference
 
 GTDB-Tk 2.4.1 against GTDB release 226. Reference genome metadata were retrieved

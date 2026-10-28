@@ -38,11 +38,16 @@ analysis/
   MAG_air_trait_analysis.R   single script; reproduces all figures and tables
 data/
   README.md                  provenance and contents of every input file
+  kraken_reports/            gzipped Kraken2 reports, one per library
   ...                        derived input tables (see data/README.md)
 hpc/
   README.md                  upstream pipeline steps, tools and parameters
 figures/
   Fig1-4, FigS1-4            published figures as produced by the script
+results/
+  Fig*, FigS*                the same figures, as written by a re-run
+  *.tsv                      every statistic reported in the paper
+  sessionInfo.txt            R and package versions of that run
 ```
 
 ## Running the analysis
@@ -51,29 +56,25 @@ Requires **R 4.4.0** or later and the following packages:
 
 ```r
 install.packages(c("data.table", "dplyr", "tidyr", "stringr", "ggplot2", "scales",
-                   "patchwork", "lme4", "lmerTest", "ape", "phytools"))
+                   "patchwork", "lme4", "lmerTest", "jsonlite", "ape", "phytools"))
 ```
 
 Then, from the repository root:
 
 ```bash
-AERO_BASE=$(pwd) Rscript analysis/MAG_air_trait_analysis.R
+Rscript analysis/MAG_air_trait_analysis.R
 ```
 
-or set `BASE` in Section 0 of the script and source it in RStudio.
+or set the working directory to the repository root and source the script in
+RStudio. Every path in Section 0 is relative to the repository root, so nothing
+needs editing. Set the `AERO_BASE` environment variable only if you need to run
+against a copy of the inputs held elsewhere.
 
-Outputs are written to `mag_based/corrected_analysis/` relative to `AERO_BASE`,
-and comprise the eight figure PDFs plus a `.tsv` for every statistic reported in
-the paper. Runtime is a few minutes on a laptop; the phylogenetic and population
-genomics sections are the slowest steps.
-
-### Note on paths
-
-The script was written against the original working tree, in which the derived
-tables sat one directory above a `mag_based/` subfolder. Inputs in this repository
-have been collected into `data/`, so the file paths in Section 0 of the script
-(`F_COV`, `F_META`, `F_KO`, `F_READS`, `DIR_IS` and the tree and alignment files)
-must be pointed at `data/` before the script will run unmodified.
+Outputs are written to `results/`: the eight figure PDFs, a `.tsv` for every
+statistic reported in the paper, and `sessionInfo.txt`. Runtime is a few minutes
+on a laptop; the phylogenetic and population genomics sections are the slowest
+steps. The script runs end to end and exits cleanly; the committed `results/`
+is what it produced.
 
 ## Software used
 

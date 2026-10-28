@@ -14,7 +14,7 @@
 ##   Sites whose aerosol metagenome has < 1% of reads mapped to the MAGs (MK and
 ##   RM) are excluded from all air association analyses.
 ##
-## Outputs (OUTDIR)                                   Manuscript item
+## Outputs (written to results/)                       Manuscript item
 ##   Fig1_air_vs_source.pdf                           Figure 1
 ##   Fig2_phylum_composition.pdf                      Figure 2
 ##   Fig3_trait_odds_ratios.pdf                       Figure 3
@@ -31,28 +31,30 @@
 ##   sessionInfo.txt                                  R and package versions
 ##
 ## How to run
-##   Set BASE in SECTION 0 (or the AERO_BASE environment variable), then Source.
+##   Run from the repository root; every path below is relative to it and
+##   needs no editing. From a shell:  Rscript analysis/MAG_air_trait_analysis.R
+##   In RStudio: set the working directory to the repository root and Source.
 ##   Required packages: data.table, dplyr, tidyr, stringr, ggplot2, scales,
 ##   patchwork, lme4, lmerTest, jsonlite, ape, phytools.
 ## ============================================================================
 ## SECTION 0. SETTINGS  (the only section you normally need to edit)
 ## ============================================================================
 
-## Folder that contains site_derep_all894_mean_cov.REBUILT.tsv
-BASE <- Sys.getenv(
-  "AERO_BASE",
-  "~/Desktop/Airmicrobiome_project/GSC_aeromicrobiome/R_work/bin_based"
-)
+## Repository root. Defaults to the current directory, so the script runs as-is
+## from the repository root; AERO_BASE overrides it if you need to run elsewhere.
+BASE <- Sys.getenv("AERO_BASE", ".")
 
 ## Input files (relative to BASE)
-F_COV   <- "site_derep_all894_mean_cov.REBUILT.tsv"               # corrected coverage
-F_META  <- "site_coassemble_HQ_MQ_checkm_gtdb.v2_summery.csv"     # CheckM + GTDB-Tk, 894 bins
-F_KO    <- "mag_based/eggnog_allMAGs.KO_long.tsv"                 # MAG_id <tab> KO
-F_READS <- "read_counts_per_sample.tsv"   # samtools flagstat on the CoverM BAMs:
-                                          # sample, primary, primary_mapped
+F_COV   <- "data/site_derep_all894_mean_cov.REBUILT.tsv"           # corrected coverage
+F_META  <- "data/site_coassemble_HQ_MQ_checkm_gtdb.v2_summery.csv" # CheckM + GTDB-Tk, 894 bins
+F_KO    <- "data/eggnog_allMAGs.KO_long.tsv"                       # MAG_id <tab> KO
+F_READS <- "data/read_counts_per_sample.tsv"  # samtools flagstat on the CoverM BAMs:
+                                              # sample, primary, primary_mapped
 
-## Output folder (created if missing)
-OUTDIR  <- "mag_based/corrected_analysis"
+## Output folder (created if missing). The eight published figure PDFs are also
+## kept in figures/; a re-run writes the complete set, every statistic table and
+## sessionInfo.txt here.
+OUTDIR  <- "results"
 
 ## Air association = within-site log2 ratio of depth-normalised coverage:
 ##   own-site air sample / mean of own-site soil or water samples.
@@ -508,7 +510,7 @@ stopifnot(nrow(ko_trait_map) == 47, !any(duplicated(ko_trait_map$KO)))
 ##   KEGG has no KO specific to the high-affinity group 1h [NiFe]-hydrogenase,
 ##   so hhyL/hhyS are dropped rather than replaced, keeping the list a priori
 ##   (47 genes).
-F_KEGG <- "kegg_ko_list.tsv"
+F_KEGG <- "data/kegg_ko_list.tsv"
 if (file.exists(F_KEGG)) {
   kegg <- fread(F_KEGG, header = FALSE, sep = "\t", col.names = c("KO", "kegg_definition"))
   ## KEGG uses a different symbol for three markers (same enzyme)
@@ -816,7 +818,7 @@ dev.off()
 ##   3 Food              : cheese, dairy product, food
 ##   4 Environmental     : soil, sediment, water, marine, lake, spring, plant, alga
 ##   5 Unknown           : no informative field
-F_REFSUM <- "closest_ref_summary.jsonl"
+F_REFSUM <- "data/closest_ref_summary.jsonl"
 if (file.exists(F_REFSUM)) {
   suppressPackageStartupMessages(library(jsonlite))
   null_na <- function(x) if (is.null(x) || length(x) == 0) NA_character_ else as.character(x[1])
@@ -909,8 +911,8 @@ if (file.exists(F_REFSUM)) {
 ##       also for DF and for VL + BB separately
 ##   (b) clustering of air-enriched MAGs: mean pairwise patristic distance
 ##       among them vs random sets of the same size (permutation)
-F_TREE <- "bac120_525_fasttree.nwk"
-F_MSA  <- c("gtdbtk_bac120_msa_HQ.fasta.gz", "gtdbtk_bac120_msa_MQ.fasta.gz")
+F_TREE <- "data/bac120_525_fasttree.nwk"
+F_MSA  <- c("data/gtdbtk_bac120_msa_HQ.fasta.gz", "data/gtdbtk_bac120_msa_MQ.fasta.gz")
 suppressPackageStartupMessages({ library(ape); library(phytools) })
 if (!file.exists(F_TREE) && all(file.exists(F_MSA))) {
   read_msa <- function(f) { x <- readLines(gzfile(f)); h <- grep("^>", x)
@@ -1055,7 +1057,7 @@ if (file.exists(F_TREE)) {
 ##       between two samples of the SAME habitat.
 ##       Confound: popANI tracks the fraction of genome compared; handled by
 ##       restricting to pairs with a matched compared fraction.
-DIR_IS      <- "instrain_DF"                  # folder holding the inStrain tables
+DIR_IS      <- "data/instrain_DF"             # folder holding the inStrain tables
 IS_SAMPLES  <- c(air = "A_DF1", soil1 = "S_DF1", soil2 = "S_DF2")
 IS_RAR      <- c(5, 10)                       # rarefaction depths rerun
 MIN_COV_IS  <- 5                              # min coverage per sample
@@ -1225,8 +1227,8 @@ if (!is.null(nd_raw) || !is.null(popani)) {
 ##     come from samtools idxstats, summed per genome.
 ## Sample naming: the VL air library is labelled AC_VL2 in the read-based
 ## pipeline and A_VL2 here; it is the VL air sample, not a control.
-F_IDX   <- "controls/genome_mapped_reads_17samples.tsv"
-DIR_KR  <- "kraken_reports"
+F_IDX   <- "data/controls/genome_mapped_reads_17samples.tsv"
+DIR_KR  <- "data/kraken_reports"            # gzipped Kraken2 reports, one per library
 CONTROLS <- c("AC_DF2", "AC_RM2")
 KR_NAME  <- c(A_VL2 = "AC_VL2")                 # kraken file name differences
 
@@ -1243,7 +1245,7 @@ if (file.exists(F_IDX)) {
     mutate(across(c(mapped_reads, genome_length), as.numeric))
 
   ctrl_depth <- bind_rows(lapply(CONTROLS, function(cs) {
-    f <- file.path("controls", paste0(cs, ".flagstat.txt"))
+    f <- file.path("data/controls", paste0(cs, ".flagstat.txt"))
     v <- read_flag_primary(f); tibble(sample = cs, primary = v[["primary"]], primary_mapped = v[["mapped"]])
   }))
   depth <- bind_rows(reads %>% select(sample, primary, primary_mapped), ctrl_depth)
@@ -1251,7 +1253,7 @@ if (file.exists(F_IDX)) {
   ## ---- (a) per-sample recruitment and composition --------------------------
   kr_one <- function(smp) {
     fn <- if (smp %in% names(KR_NAME)) KR_NAME[[smp]] else smp
-    f <- file.path(DIR_KR, paste0(fn, ".kreport"))
+    f <- file.path(DIR_KR, paste0(fn, ".kreport.gz"))
     if (!file.exists(f)) return(NULL)
     k <- fread(f, header = FALSE, sep = "\t", quote = "",
                col.names = c("pct", "clade", "taxon", "rank", "taxid", "name")) %>%
@@ -1263,6 +1265,15 @@ if (file.exists(F_IDX)) {
            pct_human = g("Homo sapiens"), pct_viruses = g("Viruses"))
   }
   comp <- bind_rows(lapply(depth$sample, kr_one))
+  if (nrow(comp) == 0) {
+    warning("No Kraken2 reports found in ", DIR_KR,
+            "; the composition columns of SuppTable_read_recruitment_and_composition ",
+            "will be NA.", call. = FALSE)
+    comp <- tibble(sample = character(), kraken_pairs = numeric(),
+                   pct_unclassified = numeric(), pct_bacteria = numeric(),
+                   pct_archaea = numeric(), pct_fungi = numeric(),
+                   pct_human = numeric(), pct_viruses = numeric())
+  }
   recruit <- depth %>%
     mutate(type = case_when(sample %in% CONTROLS ~ "Field control",
                             str_detect(sample, "^A_") ~ "Air",

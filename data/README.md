@@ -30,3 +30,19 @@ The analysis script reads `kegg_ko_list.tsv`. In the original working tree this 
 was named `kegg_ko_list.txt`, and because the read is guarded by `file.exists()` the
 marker gene verification step was skipped silently. The file is supplied here with the
 extension the script expects, so that step now runs.
+
+## kraken_reports/
+
+Kraken2 reports for all 17 libraries, one per sample, gzipped. `data.table::fread`
+reads them compressed, so no decompression is needed.
+
+These give the per-sample read composition (unclassified, Bacteria, Archaea,
+Fungi, *Homo sapiens*, Viruses) used in
+`SuppTable_read_recruitment_and_composition.tsv`, which is the source of the
+read recruitment and composition values in the paper, and which the field
+control comparison in Supplementary Figure S1 depends on.
+
+File names follow the library names, with two exceptions inherited from the
+read-based pipeline: `AC_VL2.kreport.gz` is the VL **aerosol** sample, which the
+coverage tables call `A_VL2`, while `AC_DF2` and `AC_RM2` are the two field
+controls. The script maps the first of these in `KR_NAME`.
