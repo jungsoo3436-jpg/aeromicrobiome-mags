@@ -7,8 +7,9 @@ shows that lineage, not survival traits, distinguishes airborne bacteria.
 *(manuscript in preparation)*
 
 This repository reproduces every figure, table and statistic in the paper from the
-derived tables in `data/`. Raw sequencing reads are deposited separately in the
-European Nucleotide Archive under project accession **PRJEB109287**.
+derived tables in `data/`. The raw sequencing reads and the MAGs themselves are
+deposited together in the European Nucleotide Archive under project accession
+**PRJEB109287**.
 
 ## Companion repository
 
@@ -18,7 +19,7 @@ and gene-centric analyses of the same aerosol and paired source metagenomes are 
 which covers Kraken2/Bracken taxonomic profiling, diversity and ordination,
 site-blocked DESeq2 differential abundance, and curated marker gene profiling
 against a non-redundant gene catalog. Both repositories draw on the same
-sequencing deposit, ENA PRJEB109287.
+ENA deposit, PRJEB109287, which holds both the raw reads and the MAGs.
 
 ## What the study did
 
