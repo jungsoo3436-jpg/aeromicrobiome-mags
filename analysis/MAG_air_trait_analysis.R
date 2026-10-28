@@ -1290,9 +1290,13 @@ if (file.exists(F_IDX)) {
                                                   pmin(100, 100 * pct_mapped_to_MAGs / pct_bacteria), NA)) %>%
     arrange(factor(type, levels = c("Air", "Field control", "Soil", "Water")), site)
   cat("\n=== Read recruitment and composition per sample ===\n")
-  print(recruit %>% select(sample, type, primary, pct_mapped_to_MAGs, pct_bacteria,
-                           pct_fungi, pct_human, pct_unclassified) %>%
-          mutate(across(where(is.double), ~ round(.x, 2))), n = Inf)
+  ## as.data.frame() so this prints through base R. recruit is a data.table,
+  ## and print.data.table treats `n` as an ambiguous partial match in recent
+  ## data.table versions.
+  print(as.data.frame(recruit %>%
+    select(sample, type, primary, pct_mapped_to_MAGs, pct_bacteria,
+           pct_fungi, pct_human, pct_unclassified) %>%
+    mutate(across(where(is.double), ~ round(.x, 2)))))
   fwrite(recruit, out("SuppTable_read_recruitment_and_composition.tsv"), sep = "\t")
 
   ## ---- (b) field controls vs air ------------------------------------------
