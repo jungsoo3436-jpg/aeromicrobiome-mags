@@ -1,0 +1,2 @@
+n_enriched	n_depleted	HHI_enriched	HHI_depleted	delta_HHI	boot_CI_low	boot_CI_high	p_bootstrap	size_matched_null_mean	size_matched_null_95	p_size_matched
+40	284	0.32625	0.179974211465979	0.146275788534021	0.0711934388018251	0.277877473467566	0	0.19723975	0.26375	0.00339932013597281

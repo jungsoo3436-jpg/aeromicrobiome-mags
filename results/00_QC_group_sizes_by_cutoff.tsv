@@ -1,0 +1,6 @@
+fold	log2_cut	n_enriched	n_intermediate	n_depleted	enriched_by_site	depleted_by_site
+1.5	0.585	44	45	312	BB:1, DF:38, VL:5	BB:36, DF:148, VL:128
+2	1	40	77	284	BB:1, DF:35, VL:4	BB:36, DF:122, VL:126
+3	1.585	34	121	246	BB:1, DF:29, VL:4	BB:36, DF:88, VL:122
+4	2	27	152	222	BB:1, DF:22, VL:4	BB:36, DF:66, VL:120
+9	3.17	19	215	167	BB:1, DF:14, VL:4	BB:36, DF:28, VL:103

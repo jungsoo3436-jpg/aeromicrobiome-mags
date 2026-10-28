@@ -1,0 +1,7 @@
+test	n	statistic	null_mean	p
+Pagel lambda, log2 ratio	401	0.960212090496115		5.31704390475329e-51
+Pagel lambda, log2 ratio minus site mean	401	0.757965043520003		7.80032449462075e-29
+MPD air-enriched vs random (BB, DF, VL)	40	1.80755110047692	1.91793509796933	0.002
+MPD air-enriched vs random (DF only)	35	1.81148838917311	1.89571346745421	0.01
+Pagel lambda, log2 ratio minus site mean (DF)	230	0.968153395065962		1.33192176491177e-36
+Pagel lambda, log2 ratio minus site mean (VL + BB)	171	0.979904857146699		4.01652878493124e-19

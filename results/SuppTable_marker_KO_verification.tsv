@@ -1,0 +1,48 @@
+Trait_Category	Gene	KO	kegg_definition	symbol_found
+DNA_Repair_Genome_Stability	recA	K03553	recA; recombination protein RecA	TRUE
+DNA_Repair_Genome_Stability	uvrA	K03701	uvrA; excinuclease ABC subunit A	TRUE
+DNA_Repair_Genome_Stability	uvrB	K03702	uvrB; excinuclease ABC subunit B	TRUE
+DNA_Repair_Genome_Stability	uvrC	K03703	uvrC; excinuclease ABC subunit C	TRUE
+DNA_Repair_Genome_Stability	uvrD	K03657	uvrD, pcrA; ATP-dependent DNA helicase UvrD/PcrA [EC:5.6.2.4]	TRUE
+DNA_Repair_Genome_Stability	mutS	K03555	mutS; DNA mismatch repair protein MutS	TRUE
+DNA_Repair_Genome_Stability	mutL	K03572	mutL; DNA mismatch repair protein MutL	TRUE
+DNA_Repair_Genome_Stability	lexA	K01356	lexA; repressor LexA [EC:3.4.21.88]	TRUE
+Oxidative_Stress_Defense	sodA/sodB	K04564	SOD2; superoxide dismutase, Fe-Mn family [EC:1.15.1.1]	TRUE
+Oxidative_Stress_Defense	katG	K03782	katG; catalase-peroxidase [EC:1.11.1.21]	TRUE
+Oxidative_Stress_Defense	ahpC	K03386	PRDX2_4, ahpC; peroxiredoxin 2/4 [EC:1.11.1.24]	TRUE
+Oxidative_Stress_Defense	trxB	K00384	trxB, TRR; thioredoxin reductase (NADPH) [EC:1.8.1.9]	TRUE
+Oxidative_Stress_Defense	gor	K00383	GSR, gor; glutathione reductase (NADPH) [EC:1.8.1.7]	TRUE
+Resource_Storage_Compounds	ppk1	K00937	ppk1; polyphosphate kinase [EC:2.7.4.1]	TRUE
+Resource_Storage_Compounds	ppk2	K22468	ppk2; polyphosphate kinase [EC:2.7.4.34]	TRUE
+Resource_Storage_Compounds	ppx	K01524	ppx-gppA; exopolyphosphatase / guanosine-5'-triphosphate,3'-diphosphate pyrophosphatase [EC:3.6.1.11 3.6.1.40]	TRUE
+Resource_Storage_Compounds	phaA	K00626	ACAT, atoB; acetyl-CoA C-acetyltransferase [EC:2.3.1.9]	TRUE
+Resource_Storage_Compounds	phaB	K00023	phbB; acetoacetyl-CoA reductase [EC:1.1.1.36]	TRUE
+Resource_Storage_Compounds	phaC	K03821	phaC, phbC; poly[(R)-3-hydroxyalkanoate] polymerase subunit PhaC [EC:2.3.1.304]	TRUE
+Resource_Storage_Compounds	glgA	K00703	glgA; starch synthase [EC:2.4.1.21]	TRUE
+Resource_Storage_Compounds	glgC	K00975	glgC; glucose-1-phosphate adenylyltransferase [EC:2.7.7.27]	TRUE
+Spore_Dormancy	spo0A	K07699	spo0A; two-component system, response regulator, stage 0 sporulation protein A	TRUE
+Spore_Dormancy	spoIIAA	K06378	spoIIAA; stage II sporulation protein AA (anti-sigma F factor antagonist)	TRUE
+Spore_Dormancy	spoIIAB	K06379	spoIIAB; stage II sporulation protein AB (anti-sigma F factor) [EC:2.7.11.1]	TRUE
+Spore_Dormancy	spoIIE	K06382	spoIIE; stage II sporulation protein E [EC:3.1.3.16]	TRUE
+Pigmentation_UV_Protection	crtB	K02291	crtB; 15-cis-phytoene synthase [EC:2.5.1.32]	TRUE
+Pigmentation_UV_Protection	phr	K01669	phr, PHR1; deoxyribodipyrimidine photo-lyase [EC:4.1.99.3]	TRUE
+Pigmentation_UV_Protection	crtI	K10027	crtI; phytoene desaturase [EC:1.3.99.26 1.3.99.28 1.3.99.29 1.3.99.31]	TRUE
+EPS_Biofilm_Matrix	bcsA	K00694	bcsA; cellulose synthase (UDP-forming) [EC:2.4.1.12]	TRUE
+EPS_Biofilm_Matrix	pgaA	K11935	pgaA; biofilm PGA synthesis protein PgaA	TRUE
+EPS_Biofilm_Matrix	pgaC	K11936	pgaC, icaA; poly-beta-1,6-N-acetyl-D-glucosamine synthase [EC:2.4.1.-]	TRUE
+Desiccation_Osmoprotection	otsA	K00697	otsA; trehalose 6-phosphate synthase [EC:2.4.1.15 2.4.1.347]	TRUE
+Desiccation_Osmoprotection	otsB	K01087	otsB; trehalose 6-phosphate phosphatase [EC:3.1.3.12]	TRUE
+Desiccation_Osmoprotection	betA	K00108	betA, CHDH; choline dehydrogenase [EC:1.1.99.1]	TRUE
+Desiccation_Osmoprotection	ectA	K06718	ectA; L-2,4-diaminobutyric acid acetyltransferase [EC:2.3.1.178]	TRUE
+Desiccation_Osmoprotection	ectC	K06720	ectC; L-ectoine synthase [EC:4.2.1.108]	TRUE
+Acid_pH_Stress_Tolerance	gadA/gadB	K01580	E4.1.1.15, gadB, gadA, GAD; glutamate decarboxylase [EC:4.1.1.15]	TRUE
+Acid_pH_Stress_Tolerance	gadC	K20265	gadC; glutamate:GABA antiporter	TRUE
+Acid_pH_Stress_Tolerance	ureC	K01428	ureC; urease subunit alpha [EC:3.5.1.5]	TRUE
+Membrane_Homeostasis_Mechanosensing	mscL	K03282	mscL; large conductance mechanosensitive channel	TRUE
+Membrane_Homeostasis_Mechanosensing	mscS	K03442	mscS; small conductance mechanosensitive channel	TRUE
+Membrane_Homeostasis_Mechanosensing	cfa	K00574	cfa; cyclopropane-fatty-acyl-phospholipid synthase [EC:2.1.1.79]	TRUE
+C1_and_Trace_Gas_Metabolism	coxL	K03520	coxL, cutL; aerobic carbon-monoxide dehydrogenase large subunit [EC:1.2.5.3]	TRUE
+C1_and_Trace_Gas_Metabolism	coxM	K03519	coxM, cutM; aerobic carbon-monoxide dehydrogenase medium subunit [EC:1.2.5.3]	TRUE
+C1_and_Trace_Gas_Metabolism	coxS	K03518	coxS; aerobic carbon-monoxide dehydrogenase small subunit [EC:1.2.5.3]	TRUE
+C1_and_Trace_Gas_Metabolism	xoxF	K23995	xoxF; lanthanide-dependent methanol dehydrogenase [EC:1.1.2.10]	TRUE
+C1_and_Trace_Gas_Metabolism	mxaF	K14028	mdh1, mxaF; methanol dehydrogenase (cytochrome c) subunit 1 [EC:1.1.2.7]	TRUE

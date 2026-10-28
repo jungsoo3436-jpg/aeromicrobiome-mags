@@ -1,0 +1,11 @@
+variable	grp	n	median	q1	q3
+completeness	Air-depleted	284	88.945	83.145	93.9875
+completeness	Air-enriched	40	88.2	84.98	94.345
+contamination	Air-depleted	284	3.355	1.8	5.685
+contamination	Air-enriched	40	3.475	1.59	6.26
+gc_percent	Air-depleted	284	49.785	40.215	63.0825
+gc_percent	Air-enriched	40	45.455	39.1175	59.285
+genome_size	Air-depleted	284	2843413.5	2279086.25	3574232.5
+genome_size	Air-enriched	40	1862684.5	1750327.75	2136944
+total_KO	Air-depleted	284	1181	997	1366.25
+total_KO	Air-enriched	40	985.5	848	1104

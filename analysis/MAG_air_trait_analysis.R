@@ -1255,7 +1255,11 @@ if (file.exists(F_IDX)) {
     fn <- if (smp %in% names(KR_NAME)) KR_NAME[[smp]] else smp
     f <- file.path(DIR_KR, paste0(fn, ".kreport.gz"))
     if (!file.exists(f)) return(NULL)
-    k <- fread(f, header = FALSE, sep = "\t", quote = "",
+    ## Read the gzipped report through a base-R connection. fread() can take a
+    ## .gz path directly only if the optional R.utils package is installed, and
+    ## this keeps the dependency list unchanged.
+    k <- fread(text = readLines(gzfile(f, "rt")),
+               header = FALSE, sep = "\t", quote = "",
                col.names = c("pct", "clade", "taxon", "rank", "taxid", "name")) %>%
       mutate(name = trimws(name))
     tot <- sum(k$clade[k$name %in% c("unclassified", "root")])

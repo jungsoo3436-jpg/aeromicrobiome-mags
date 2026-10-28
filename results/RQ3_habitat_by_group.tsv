@@ -1,0 +1,10 @@
+air_group	habitat	n	n_group	pct
+Air-depleted	Animal-associated	9	51	17.6470588235294
+Air-depleted	Engineered/waste	13	51	25.4901960784314
+Air-depleted	Environmental	20	51	39.2156862745098
+Air-depleted	Unknown	9	51	17.6470588235294
+Air-enriched	Animal-associated	12	28	42.8571428571429
+Air-enriched	Engineered/waste	1	28	3.57142857142857
+Air-enriched	Environmental	2	28	7.14285714285714
+Air-enriched	Food	2	28	7.14285714285714
+Air-enriched	Unknown	11	28	39.2857142857143
